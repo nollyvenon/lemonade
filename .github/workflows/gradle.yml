@@ -37,6 +37,7 @@ jobs:
         arguments: build
 
         
+
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v2
   
@@ -55,3 +56,4 @@ jobs:
           context: .
           push: true
           tags: user/app:latest
+
