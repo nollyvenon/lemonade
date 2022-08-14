@@ -38,7 +38,6 @@ jobs:
 
         
     - name: Build and Push Docker Image
-    - id: docker-publish
       uses: bitovi/github-actions-docker-publish@main
       with:
         docker_username: ${{ secrets.DOCKER_USERNAME }}
