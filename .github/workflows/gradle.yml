@@ -36,6 +36,7 @@ jobs:
       with:
         arguments: build
 
+   
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
        
@@ -56,6 +57,7 @@ jobs:
         sha: 'true' # won't do anything since image_tag is set
         org_name: johnnyup
         repo_name: myaccount
+    
     - run: |
         echo "Image Created:  ${{ env.image }}"
         echo "Tag Created: ${{ env.tag }}"
