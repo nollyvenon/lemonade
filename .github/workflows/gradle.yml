@@ -54,8 +54,8 @@ jobs:
         checkout: 'false'
         image_tag: it
         sha: 'true' # won't do anything since image_tag is set
-        org_name: bitovi
-        repo_name: deploy-eks-helm
+        org_name: johnnyup
+        repo_name: myaccount
     - run: |
         echo "Image Created:  ${{ env.image }}"
         echo "Tag Created: ${{ env.tag }}"
