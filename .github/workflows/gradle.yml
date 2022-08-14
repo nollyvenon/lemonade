@@ -38,7 +38,7 @@ jobs:
 
     - id: docker-publish
       name: Build image
-      uses: bitovi/github-actions-docker-publish@1.0.3
+      uses: bitovi/github-actions-docker-publish@main
       with:
         docker_username: ${{ secrets.DOCKER_USERNAME }}
         docker_password: ${{ secrets.DOCKER_PASSWORD }}
