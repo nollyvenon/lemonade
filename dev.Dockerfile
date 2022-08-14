@@ -13,3 +13,4 @@ RUN --mount=type=bind,target=.,rw \
 
 FROM scratch AS vendor-update
 COPY --from=deps /vendor /
+
