@@ -36,9 +36,17 @@ jobs:
       with:
         arguments: build
 
-        
-    - name: Build and Push Docker Image
-      uses: bitovi/github-actions-docker-publish@main
+    - id: docker-publish
+      name: Build image
+      uses: bitovi/github-actions-docker-publish@1.0.3
       with:
         docker_username: ${{ secrets.DOCKER_USERNAME }}
         docker_password: ${{ secrets.DOCKER_PASSWORD }}
+        checkout: 'false'
+        image_tag: it
+        sha: 'true' # won't do anything since image_tag is set
+        org_name: bitovi
+        repo_name: deploy-eks-helm
+    - run: |
+        echo "Image Created:  ${{ env.image }}"
+        echo "Tag Created: ${{ env.tag }}"
